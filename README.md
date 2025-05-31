@@ -14,17 +14,29 @@ To write a C Program to find area of rectangle using pointer.
 #include <stdio.h>
 
 int main() {
-    float x, y, area;
+    float length, width, area;
+    float *ptrLength, *ptrWidth;
 
-    scanf("%f", &x);
-    scanf("%f", &y);
+    // Assign addresses to pointers
+    ptrLength = &length;
+    ptrWidth = &width;
 
-    area = x * y;
+    // Input length and width
+    printf("Enter the length of the rectangle: ");
+    scanf("%f", ptrLength);
 
-    printf("%.2f\n", area);
+    printf("Enter the width of the rectangle: ");
+    scanf("%f", ptrWidth);
+
+    // Calculate area using dereferenced pointers
+    area = (*ptrLength) * (*ptrWidth);
+
+    // Output the result
+    printf("Area of the rectangle = %.2f\n", area);
 
     return 0;
 }
+
 
 ```
 
@@ -77,7 +89,7 @@ int main() {
 
 
 ## RESULT
-Thus the program to print 'WELCOME' using malloc() and free() has been executed successfully
+Thus the program to print 'HELLO' using malloc() and free() has been executed successfully
  
 .
 
